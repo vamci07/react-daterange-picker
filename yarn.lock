@@ -952,6 +952,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.12.tgz#cc791b402360db1eaf7176479072f91ee6c6c7ca"
   integrity sha512-Uy0PN4R5vgBUXFoJrKryf5aTk3kJ8Rv3PdlHjl6UaX+Cqp1QE0yPQ68MPXGrZOfG7gZVNDIJZYyot0B9ubXUrQ==
 
+"@types/react-calendar@^3.0.0":
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/@types/react-calendar/-/react-calendar-3.0.1.tgz#45527c0ec03cbd17678cec478add1c4bb17ac852"
+  integrity sha512-taCzghjYNgJZvHWB9tQKfRcmALtPBCu+Nl1VurpUYK6RT+ZASXI+ysjBaMstqd0uP4bbVt8ITMEprNqKLrrGzA==
+
 "@types/stack-utils@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-1.0.1.tgz#0a851d3bd96498fa25c33ab7278ed3bd65f06c3e"
@@ -961,6 +966,11 @@
   version "12.0.12"
   resolved "https://registry.yarnpkg.com/@types/yargs/-/yargs-12.0.12.tgz#45dd1d0638e8c8f153e87d296907659296873916"
   integrity sha512-SOhuU4wNBxhhTHxYaiG5NY4HBhDIDnJF60GU+2LqHAdKKer86//e4yg69aENCtQ04n0ovz+tq2YPME5t5yp4pw==
+
+"@wojtekmaj/date-utils@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@wojtekmaj/date-utils/-/date-utils-1.0.2.tgz#31348c572606ac42aaf9b7bb22074fc0b163cc2b"
+  integrity sha512-sOu+uH3jzsECLg3YGH++/pLWs8S4eKiXMwMIcotE62CO9AB/HRyhZ0ISwann/30DLnfCw4skvr8h9gF3aafhPA==
 
 abab@^2.0.0:
   version "2.0.0"
@@ -2439,7 +2449,7 @@ get-stream@^4.0.0:
   dependencies:
     pump "^3.0.0"
 
-get-user-locale@^1.1.1, get-user-locale@^1.2.0:
+get-user-locale@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/get-user-locale/-/get-user-locale-1.2.0.tgz#e4940db90a6694a512455af3f756903a01410eb7"
   integrity sha512-yodJVDMWnM4ZOGa+n1ofebE8u+yjd8FIZMqthUK+xcOQcmfU2ECaP5gLiTMt6j0R/e67QsEelES0fQYLy/oHPg==
@@ -4441,7 +4451,7 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-calendar@^2.18.0, react-calendar@^2.19.1:
+react-calendar@^2.19.1:
   version "2.19.1"
   resolved "https://registry.yarnpkg.com/react-calendar/-/react-calendar-2.19.1.tgz#6d56ec4abc5c93681b980e46fedb86712542531e"
   integrity sha512-BVV6q7mRFB0Gcc0N3UhfpQHzUTCsSbNj7RFIVXW3ZmcB+57Vx6QY+Y81va7GShedDDViwpAba99rAi8KaBUJDw==
@@ -4451,19 +4461,30 @@ react-calendar@^2.18.0, react-calendar@^2.19.1:
     prop-types "^15.6.0"
     react-lifecycles-compat "^3.0.4"
 
-react-date-picker@^7.8.0:
-  version "7.8.0"
-  resolved "https://registry.yarnpkg.com/react-date-picker/-/react-date-picker-7.8.0.tgz#f5a2d7c6f479c19397598a6e74ebe61feecef720"
-  integrity sha512-goD0XKDFU/j6Wkm7kNTcoL2GifDCUPkn9SIcl50LWLFQcElNVvronleQJsqkk2ZWvHak7sKOTSwhR5Gi+iqzpg==
+react-calendar@^3.0.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-calendar/-/react-calendar-3.1.0.tgz#7a384a70f98e02177d176c45f6918fb6a15ce41f"
+  integrity sha512-xoKdRe6FrnZ30LD9pyr20fhet1uwSbc6srLGm1ib7G4b7tAXniZrwzrJ4YV/Hbmmwf/zAFGyXtBzLAIV1KNvuA==
   dependencies:
-    get-user-locale "^1.1.1"
+    "@wojtekmaj/date-utils" "^1.0.2"
+    get-user-locale "^1.2.0"
+    merge-class-names "^1.1.1"
+    prop-types "^15.6.0"
+
+react-date-picker@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/react-date-picker/-/react-date-picker-8.0.1.tgz#d91a01c6904c5ebaf03fb70848f31b1d6d7e9b68"
+  integrity sha512-FDM34LTOQ+QoOlsJeKtLZf+11NU2p1hcTy6K1xFgwuvuIwTEpUPJAnyQbgqEbzsHvMVPuNlGJSoSRFbImPWNkw==
+  dependencies:
+    "@types/react-calendar" "^3.0.0"
+    "@wojtekmaj/date-utils" "^1.0.2"
+    get-user-locale "^1.2.0"
     make-event-props "^1.1.0"
     merge-class-names "^1.1.1"
     prop-types "^15.6.0"
-    react-calendar "^2.18.0"
+    react-calendar "^3.0.0"
     react-fit "^1.0.3"
-    react-lifecycles-compat "^3.0.4"
-    update-input-width "^1.0.1"
+    update-input-width "^1.1.1"
 
 react-dom@^16.7.0:
   version "16.8.6"
@@ -5382,10 +5403,10 @@ upath@^1.1.1:
   resolved "https://registry.yarnpkg.com/upath/-/upath-1.1.2.tgz#3db658600edaeeccbe6db5e684d67ee8c2acd068"
   integrity sha512-kXpym8nmDmlCBr7nKdIx8P2jNBa+pBpIUFRnKJ4dr8htyYGJFokkr2ZvERRtUN+9SY+JqXouNgUPtv6JQva/2Q==
 
-update-input-width@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/update-input-width/-/update-input-width-1.0.1.tgz#916033cccc8bca9debaa6ed7a8f74def33198a84"
-  integrity sha512-RejZ4/tYUZwaudPbSD4pOW5sYXKFI6bvHc+nb8z8GUdixxbQm2391IguMa8eYMraBs8hdVQMUXeseDbfs77Anw==
+update-input-width@^1.1.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/update-input-width/-/update-input-width-1.2.1.tgz#769d6182413590c3b50b52ffa9c65d79e2c17f95"
+  integrity sha512-zygDshqDb2C2/kgfoD423n5htv/3OBF7aTaz2u2zZy998EJki8njOHOeZjKEd8XSYeDziIX1JXfMsKaIRJeJ/Q==
 
 uri-js@^4.2.2:
   version "4.2.2"
